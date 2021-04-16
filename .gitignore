@@ -1,3 +1,4 @@
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -9,3 +10,45 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+
+# NetBeans
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle
+
+.DS_Store
+.idea
+*.log
+*.jdbc
+*.iml
+target
+*.class
+*.jar
+*.war
+*.ear
+*.rar
+*.ipr
+*.iws
+rebel.xml
+*DB
+*.dat
+.classpath
+.project
+.settings
+WebContent
+*.vpp~*
+*.vpdm
+vpproject
+.vpprefdata
+*dummy*.*
+*-soapui-project.xml
+.lock
+teamworkUser.xml
+projectFilesBackup*
+create.sql
+drop.sql

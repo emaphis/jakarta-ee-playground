@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.agoncal.book.javaee7</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <name>Parent of Book Java EE 7</name>
+    
+    <properties>
+        <version.java>1.8</version.java>
+        <!-- Java EE -->
+        <version.javaee>7.0</version.javaee>
+        <version.weld>2.4.8.Final</version.weld>
+        <!-- Testng -->
+        <version.junit>4.13.3</version.junit>
+        
+        <!-- Project_-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${version.javaee}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.weld.se</groupId>
+                <artifactId>weld-se</artifactId>
+                <version>${version.weld}</version>
+                <scope>runtime</scope>
+            </dependency>
+        
+            <!---Test -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${version.junit}</version>
+                <scope>test</scope>
+            </dependency>
+        
+        </dependencies>
+    </dependencyManagement>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.aapache.maven.plugins</groupId>
+                <artifactId>maven-surefie-pluting</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>${version.java}</source>
+                    <target>${version.java}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+            
+            <!-- Codehaus -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

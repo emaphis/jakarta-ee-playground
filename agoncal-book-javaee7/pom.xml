@@ -13,7 +13,7 @@
         <version.javaee>7.0</version.javaee>
         <version.weld>2.4.8.Final</version.weld>
         <!-- Testng -->
-        <version.junit>4.13.3</version.junit>
+        <version.junit>4.13.2</version.junit>
         
         <!-- Project_-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +31,6 @@
                 <groupId>org.jboss.weld.se</groupId>
                 <artifactId>weld-se</artifactId>
                 <version>${version.weld}</version>
-                <scope>runtime</scope>
             </dependency>
         
             <!---Test -->
@@ -97,4 +96,7 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>chapter02</module>
+    </modules>
 </project>

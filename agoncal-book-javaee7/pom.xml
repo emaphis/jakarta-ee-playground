@@ -6,7 +6,7 @@
     <version>1.0</version>
     <packaging>pom</packaging>
     <name>Parent of Book Java EE 7</name>
-    
+
     <properties>
         <version.java>1.8</version.java>
         <!-- Java EE -->
@@ -14,11 +14,11 @@
         <version.weld>2.4.8.Final</version.weld>
         <!-- Testng -->
         <version.junit>4.13.2</version.junit>
-        
+
         <!-- Project_-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -32,7 +32,7 @@
                 <artifactId>weld-se</artifactId>
                 <version>${version.weld}</version>
             </dependency>
-        
+
             <!---Test -->
             <dependency>
                 <groupId>junit</groupId>
@@ -40,10 +40,10 @@
                 <version>${version.junit}</version>
                 <scope>test</scope>
             </dependency>
-        
+
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -74,13 +74,13 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
             </plugin>
-            
+
             <!-- Codehaus -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -96,7 +96,5 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>chapter02</module>
-    </modules>
+    <modules></modules>
 </project>
